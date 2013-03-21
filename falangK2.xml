@@ -1,29 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<install version="0.9" type="plugin" group="search">
-    <name>Search - K2 - Falang</name>
+<install version="1.0" type="plugin" group="search">
+    <name>plg_search_falang_k2</name>
     <author>Oļegs Čapligins</author>
     <creationDate>2013-03-21</creationDate>
     <copyright>Oļegs Čapligins</copyright>
     <license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
     <authorEmail>shader@dautkom.lv</authorEmail>
     <authorUrl>http://localhost</authorUrl>
-    <version>0.9.0</version>
-    <description>Enables searching in K2 items translated by Falang</description>
+    <version>1.0.0</version>
+    <description>plg_search_falang_k2_descr</description>
     <files>
         <filename plugin="falangK2">falangK2.php</filename>
+        <folder>language</folder>
     </files>
+    <languages>
+        <language tag="language/en-GB">en-GB.plg_search_falangK2.ini</language>
+        <language tag="language/en-GB">en-GB.plg_search_falangK2.sys.ini</language>
+        <language tag="language/lv-LV">lv-LV.plg_search_falangK2.ini</language>
+        <language tag="language/lv-LV">lv-LV.plg_search_falangK2.sys.ini</language>
+        <language tag="language/ru-RU">ru-RU.plg_search_falangK2.ini</language>
+        <language tag="language/ru-RU">ru-RU.plg_search_falangK2.sys.ini</language>
+    </languages>
     <config>
         <fields name="params">
             <fieldset name="basic">
                 <field name="search_limit" type="text" size="5" default="50"
-                       label="Search Limit"
-                       description="Number of search items to return"/>
+                       label="plg_search_falang_k2_field_search_limit"
+                       description="plg_search_falang_k2_field_search_limit_descr"/>
                 <field name="@spacer" type="spacer" default="" label="" description="" />
                 <field name="active_language_only" type="radio" default="1"
-                       label="Active language only"
-                       description="Search only within active language?">
-                    <option value="0">No</option>
-                    <option value="1">Yes</option>
+                       label="plg_search_falang_k2_field_active"
+                       description="plg_search_falang_k2_field_active_descr">
+                    <option value="0">plg_search_falang_k2_value_no</option>
+                    <option value="1">plg_search_falang_k2_value_yes</option>
                 </field>
             </fieldset>
         </fields>
