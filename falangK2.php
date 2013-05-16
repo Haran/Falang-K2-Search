@@ -122,7 +122,7 @@ class plgSearchFalangK2 extends JPlugin
 				SELECT
 				a.id as contid,
 				a.catid as catid,
-				IF (fka.value = null, fc.value, fka.value) AS title,
+				IF (ft.value = null, fc.value, ft.value) AS title,
 				a.created AS created,
 				a.introtext, a.fulltext,
 				CASE WHEN CHAR_LENGTH(a.alias) THEN CONCAT_WS(':', a.id, a.alias) ELSE a.id END as slug,
@@ -137,7 +137,7 @@ class plgSearchFalangK2 extends JPlugin
 					LEFT JOIN #__falang_content as fc ON fc.reference_id = a.id
 					LEFT JOIN #__languages as l ON fc.language_id = l.lang_id
 					LEFT JOIN #__falang_content AS fk ON ( fk.reference_id = a.catid AND fk.reference_table = 'k2_categories' )
-					LEFT JOIN #__falang_content AS fka ON (fka.reference_id = fc.reference_id AND fka.reference_field = 'title')
+					LEFT JOIN #__falang_content AS ft ON (ft.reference_id = fc.reference_id AND ft.reference_field = 'title')
 
 						WHERE ( ".$where." )
 						AND a.published = 1
