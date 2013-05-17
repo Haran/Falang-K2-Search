@@ -20,6 +20,8 @@
         <language tag="language/lv-LV">lv-LV.plg_search_falangK2.sys.ini</language>
         <language tag="language/ru-RU">ru-RU.plg_search_falangK2.ini</language>
         <language tag="language/ru-RU">ru-RU.plg_search_falangK2.sys.ini</language>
+        <language tag="language/el-GR">el-GR.plg_search_falangK2.ini</language>
+        <language tag="language/el-GR">el-GR.plg_search_falangK2.sys.ini</language>
     </languages>
     <config>
         <fields name="params">
